@@ -1,0 +1,63 @@
+@import './reset';
+@import './mixin';
+@import './vars';
+
+body{
+    background-color: $background-color;
+    color: $main-color;
+    .header{
+        &-container {
+            @include flex(row, space-around, center, 20px);
+            padding: 40px 20px;
+            .nav{
+                @include flex(row, center, center, 40px);
+                &__list {
+                    @include flex(row, center, center, 40px);
+                }
+                &__link {
+                    @include Roboto(16px, 400, 24px);
+                    text-decoration: none;
+                    color: $main-color;
+                }
+            }
+        } 
+        &-container1{
+            @include flex(column, center, center, 20px);
+            .header-box{
+                @include flex(column, center, center, 20px);
+                &__title{
+                    @include ChakraPetch(63px, 700, 60px);
+                    color: rgba(255, 255, 255, 0);
+                    -webkit-text-stroke: 1px #FFFFFF;
+                }
+                &__back{
+                    background-image: url(../image/svg/price-back.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 4px;
+                }
+                &__price{
+                    @include ChakraPetch(56px, 700, 60px);
+                   
+                }
+                &__text{
+                    @include ChakraPetch(22px, 400, 25px);
+                }
+            }
+            
+        }
+    }
+    button{
+        @include ChakraPetch (18px, 700, 25px);
+        padding: 14px 26px;
+        color: $main-color;
+        background-color:#7400D3;
+        border-radius: 30px;
+    }
+}
+
+
+
+
+
+
