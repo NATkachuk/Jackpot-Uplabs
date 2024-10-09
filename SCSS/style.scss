@@ -177,6 +177,47 @@ body{
 
             }
         }
+        .section2{
+            @include flex(column, flex-start, center, 20px);
+            margin-top: 100px;
+            &__title{
+                @include ChakraPetch(55px, 700, 60px);
+                &-text{
+                    color: $title-color;
+                }
+            }
+            &-container{
+                padding: 54px 80px;
+                @include flex(row, flex-start, flex-start, 20px);
+                &__box1{
+                    border-radius: 12px;
+                    background-color:#320F80;
+                    padding: 20px 20px 130px 20px; 
+                    @include flex(column, flex-start, center, 20px);
+                    &-text{
+                        @include Roboto(16px, 400, 25px);
+                    }
+                }
+                &__box2{
+                    border-radius: 12px;
+                    background-color:#320F80;
+                    padding: 20px 20px 56px 20px; 
+                    @include flex(column, flex-start, center, 20px);
+                    &-text{
+                        @include Roboto(16px, 400, 25px);
+                    }
+                }
+                &__box3{
+                    border-radius: 12px;
+                    background-color:#320F80;
+                    padding: 20px 20px 114px 20px; 
+                    @include flex(column, flex-start, center, 20px);
+                    &-text{
+                        @include Roboto(16px, 400, 25px);
+                    }
+                }
+            }
+        }
     }
     button{
         @include ChakraPetch (18px, 700, 25px);
