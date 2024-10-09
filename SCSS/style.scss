@@ -133,6 +133,51 @@ body{
             
         }
     }
+    .main{
+        @include flex(column, flex-start, center, 20px);
+        .section1{
+            @include flex(row, center, center, 20px);
+            &-container1{
+                @include flex(column, center, flex-start, 20px);
+                &__title{
+                    @include ChakraPetch(35px, 700, 60px);
+                    &-text{
+                        color: $title-color;
+                    }
+                }
+                .section1-box{
+                    @include flex(row, flex-start, center, 40px);
+                    &__cont{
+                        @include flex(column, center, flex-start, 30px);
+                        border-right: 3px solid transparent;
+                        border-image: linear-gradient(#DB205BFF,#7000D38C);
+                        border-image-slice: 1;
+                        padding-right: 15px;
+                        &-text{
+                            @include Roboto(21px, 500, 25px);
+                        }
+                        &-text1{
+                            @include Roboto(18px, 500, 25px);
+                            color: $title-color;
+                        }
+                    }
+                    &__wrap{
+                       @include flex(column, center, flex-start, 20px);
+                        .section1-box__coin{
+                            @include flex(row, center, center, 20px);
+                            &-text{
+                                @include Roboto(19px, 500, 25px);
+                            }
+                            &-text1{
+                                @include Roboto(18px, 500, 25px);
+                            }
+                       } 
+                    }
+                }
+
+            }
+        }
+    }
     button{
         @include ChakraPetch (18px, 700, 25px);
         padding: 14px 26px;
