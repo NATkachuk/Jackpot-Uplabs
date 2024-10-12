@@ -14,6 +14,7 @@ body{
                 @include flex(row, center, center, 40px);
                 &__list {
                     @include flex(row, center, center, 40px);
+                    list-style-type: none;
                 }
                 &__link {
                     @include Roboto(16px, 400, 24px);
@@ -232,6 +233,107 @@ body{
                         }  
                     }
                 }
+            }
+        }
+        .section4{
+            margin-top: 100px;
+            @include flex(column, flex-start, center, 20px);
+            &__title{
+                @include ChakraPetch(55px, 700, 60px);
+            }
+            &-container{
+                padding-top: 60px;
+                @include flex(row, flex-start, flex-start, 61px);
+                .section4-box{
+                    background-color: #3D1A8C;
+                    padding: 23px 68px;
+                    @include flex(row, flex-start, flex-start, 70px);
+                    &__text{
+                        @include ChakraPetch(33px, 600, 47px);
+                    }
+                    &__list{
+                        @include flex(column, flex-start, flex-start, 20px);
+                    }
+                    &__item{
+                        @include Roboto(21px, 500, 34px);
+                        margin-left: 20px;
+                    }
+                }
+            }
+            
+        }
+        .section5{
+            padding-left: 40px;
+            margin-top: 100px;
+            @include flex(row, flex-start, flex-start, 40px);
+            &-container{
+                @include flex(column, flex-start, flex-start, 20px);
+                &__title{
+                    @include ChakraPetch(45px, 700, 60px);
+                }
+                &__text{
+                    @include Roboto(19px, 400, 29px);
+                    width: 59%;
+                }
+                &__item{
+                    margin-left: 20px;
+                    @include Roboto(19px, 400, 29px);
+                    list-style: disc;
+                }
+            }
+        }
+        .section6{
+            padding: 70px 100px;
+            margin-top: 100px;
+            @include flex(row, center, center, 20px);
+            background-color: transparent;
+            background-image:  linear-gradient(#7000D3, #280B70);
+            border-radius: 8px;
+            &__img{
+                width: 50%;
+            }
+            &-container{
+                @include flex(column, flex-start, flex-start, 20px);
+                &__title{
+                    @include ChakraPetch(45px, 700, 64px);
+                }
+                &__text{
+                    @include Roboto(40px, 400, 58px);
+                    width: 86%;
+                }
+                &__label{
+                    padding: 9px;
+                    background-color: #220970;
+                    border-radius: 100px;
+                }
+            }
+        }
+    }
+    .footer{
+        padding-top: 470px;
+        margin-top: -260px;
+        background-image: url(../image/png/background2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include flex(column, flex-start, center, 200px);
+        &-container{
+            @include flex(row, flex-start, flex-start, 100px);
+            &__list{
+                @include flex(column, flex-start, flex-start, 20px);
+                list-style: none;
+            }
+            &__title{
+                @include ChakraPetch(20px, 700, 31px);
+            }
+            &__link{
+                @include Roboto(20px, 400, 31px);
+                color: $main-color;
+                text-decoration: none;
+            }
+        }
+        &-container1{
+            &__text{
+                @include Roboto(16px, 400, 28px);
             }
         }
     }
